@@ -1,5 +1,8 @@
+/* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
+
+
 // Responsive Dropdown Navbar
-function mobileMenu() {
+function mobileNav() {
   var x = document.getElementById("myTopnav");
   if (x.className === "topnav") {
     x.className += " responsive";
@@ -7,7 +10,6 @@ function mobileMenu() {
     x.className = "topnav";
   }
 }
-
 
 // active state navbar
 $(document).ready(function () {
@@ -34,6 +36,7 @@ $(document).ready(function () {
         });
     });
 });
+
 
 function onScroll(event){
     if($('#home').length >0 ){
