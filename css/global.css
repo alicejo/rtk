@@ -32,3 +32,208 @@
 		url("../assets/fonts/roboto-v20-latin-700.svg#Roboto") format("svg"); /* Legacy iOS */
 }
 
+body {
+	font-family: 'Roboto', sans-serif;
+	margin: 0;
+}
+
+header {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	padding-bottom: 10vh;
+}
+
+
+.flex {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.flex-center-center {
+	display: flex;
+	height: 100%;
+	justify-content: center;
+	align-items: center;
+}
+
+.flex-center-right {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+}
+
+.language-selector {
+	font-size: 13px;
+	float: right;
+}
+
+
+
+.headline {
+	background-color: white;
+	font-size: 34px;
+	padding: 0 30px;
+	margin-right: -160px;
+  z-index: 10;
+}
+
+.headline-video {
+	width: 70vw;
+	height: 80vh;
+	background-color: blue;
+}
+
+#work {
+	background-color: grey;
+	padding-top: 100px;
+	padding-bottom: 100px;
+}
+
+.card-gallery {
+	max-width: 940px;
+}
+
+.patent {
+	width: 600px;
+  height: 534px;
+}
+
+.brand, .designs {
+	width: 288px;
+	height: 256px;
+}
+
+.copyright, .contract-law {
+	width: 445px;
+	height: 256px;
+}
+
+
+
+/*        */
+/* Navbar */
+/*        */
+
+.before-nav {
+	height: 20px;
+	width: 100%;
+	background-color: white;
+}
+
+nav {
+	position: sticky;
+	top: 0;
+	padding: 10px 0;
+	background: white;
+	z-index: 100;
+}
+
+/* Add a black background color to the top navigation */
+.topnav {
+  background-color: #fff;
+  overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  display: block;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  color: green;
+}
+
+/* Add an active class to highlight the current page */
+.topnav a.active {
+  color: pink;
+}
+
+/* Hide the link that should open and close the topnav on small screens */
+.topnav .icon {
+  display: none;
+}
+
+/* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+@media screen and (max-width: 600px) {
+  .topnav a:not(:first-child) {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+@media screen and (max-width: 600px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive a.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
+
+
+
+
+/*            */
+/* flip cards */
+/*            */
+
+/* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+.flip-card {
+  background-color: transparent;
+  margin: 10px;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+}
+
+/* Style the back side */
+.flip-card-back {
+  background-color: dodgerblue;
+  color: white;
+  transform: rotateY(180deg);
+}
+
+.flip-card-text-inner {
+	padding: 10px;
+}
