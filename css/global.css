@@ -38,7 +38,10 @@ body {
 }
 
 header {
-	height: 100vh;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	padding-bottom: 10vh;
 }
 
 
@@ -47,11 +50,45 @@ header {
 	flex-wrap: wrap;
 }
 
+.flex-center-center {
+	display: flex;
+	height: 100%;
+	justify-content: center;
+	align-items: center;
+}
+
+.flex-center-right {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+}
+
 .language-selector {
 	font-size: 13px;
 	float: right;
 }
 
+
+
+.headline {
+	background-color: white;
+	font-size: 34px;
+	padding: 0 30px;
+	margin-right: -160px;
+  z-index: 10;
+}
+
+.headline-video {
+	width: 70vw;
+	height: 80vh;
+	background-color: blue;
+}
+
+#work {
+	background-color: grey;
+	padding-top: 100px;
+	padding-bottom: 100px;
+}
 
 .card-gallery {
 	max-width: 940px;
@@ -89,6 +126,7 @@ nav {
 	top: 0;
 	padding: 10px 0;
 	background: white;
+	z-index: 100;
 }
 
 /* Add a black background color to the top navigation */
@@ -194,4 +232,8 @@ nav {
   background-color: dodgerblue;
   color: white;
   transform: rotateY(180deg);
+}
+
+.flip-card-text-inner {
+	padding: 10px;
 }
